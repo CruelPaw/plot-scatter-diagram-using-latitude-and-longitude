@@ -1,6 +1,6 @@
 function [ txt ] = dcmcallback(empt,event_obj,label)
 dcm_obj = datacursormode(gcf);
-info=getCursorInfo(dcm_obj);
+info = getCursorInfo(dcm_obj);
 ind = info.DataIndex;
-txt = [num2str(label{ind, 1}) ' ' label{ind, 2}];
+txt = label; % txt为想要显示的内容向量
 end
