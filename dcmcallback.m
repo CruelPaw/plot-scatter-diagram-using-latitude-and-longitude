@@ -2,5 +2,5 @@ function [ txt ] = dcmcallback(empt,event_obj,label)
 dcm_obj = datacursormode(gcf);
 info = getCursorInfo(dcm_obj);
 ind = info.DataIndex;
-txt = label; % txt为想要显示的内容向量
+txt = label{ind}; % txt为想要显示的内容向量
 end
